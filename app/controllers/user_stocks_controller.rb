@@ -57,7 +57,7 @@ class UserStocksController < ApplicationController
   def update
     respond_to do |format|
       if @user_stock.update(user_stock_params)
-        format.html { redirect_to @user_stock, notice: 'User stock was successfully updated.' }
+        format.html { redirect_to @user_stock, notice: "User stock was successfully updated." }
         format.json { render :show, status: :ok, location: @user_stock }
       else
         format.html { render :edit }
@@ -71,7 +71,7 @@ class UserStocksController < ApplicationController
   def destroy
     @user_stock.destroy
     respond_to do |format|
-      format.html { redirect_to my_portfolio_path, notice: 'Stock was successfully removed from portfolio' }
+      format.html { redirect_to my_portfolio_path, notice: "Stock was successfully removed from portfolio" }
       format.json { head :no_content }
     end
   end
